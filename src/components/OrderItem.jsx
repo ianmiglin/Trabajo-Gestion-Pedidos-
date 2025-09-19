@@ -10,7 +10,7 @@ export default function OrderItem({ order }) {
   }[order.status] || 'bg-gray-100 text-gray-800 border-gray-300'
 
   return (
-    <div className="border rounded-xl p-5 bg-white shadow-sm hover:shadow-md transition-shadow card-surface">
+    <div className="card-surface p-5 bg-white hover:shadow-md transition-shadow rounded-lg w-full max-w-sm mx-auto">
       <div className="flex items-start justify-between">
         <div className="space-y-1">
           <h3 className="text-base md:text-lg font-semibold tracking-tight">Pedido #{order.id}</h3>

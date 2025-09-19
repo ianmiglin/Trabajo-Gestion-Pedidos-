@@ -23,8 +23,8 @@ function App() {
 
   return (
     <Layout tabs={["Tablero", "Seguimiento", "Alertas", "Tareas"]}>
-      <div className="space-y-6">
-        <div className="flex items-center justify-between">
+      <div className="space-y-6" id="top">
+        <div className="flex items-center justify-between" id="stats">
           <div className="w-full md:w-auto">
             <OrderStats orders={orders} />
           </div>
@@ -33,11 +33,11 @@ function App() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6">
+        <div className="grid lg:grid-cols-3 gap-6" id="new-order">
           <div className="lg:col-span-1">
             <NewOrderForm onAdd={handleAddOrder} />
           </div>
-          <div className="lg:col-span-2 space-y-3">
+          <div className="lg:col-span-2 space-y-3" id="orders">
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-semibold">Pedidos</h2>
               <span className="text-xs text-gray-600">Mostrando {filtered.length} de {orders.length}</span>
